@@ -1,54 +1,51 @@
 # ˚˖𓍢ִ໋❀ JSON Report Generator (.NET) 𝜗𝜚˚⋆
 
-Projeto desenvolvido em **C# / .NET** com o objetivo de servir como base de apoio e estudo para fluxos de validação de regras de negócio, tratamento de exceções, serialização/desserialização de dados em JSON e consultas analíticas utilizando **LINQ**.
+Project developed in **C# / .NET** designed to serve as a baseline for studying and practicing business rule validation flows, exception handling, JSON data serialization/deserialization, and analytical queries using **LINQ**.
 
 ---
 
-## ʚɞ Funcionalidades e Fluxo do Projeto
+## ʚɞ Features & Project Flow
 
-O fluxo da aplicação simula um pipeline de processamento de dados robusto:
-1. **Entrada de Dados:** Recebe uma lista de objetos brutos (neste exemplo, livros).
-2. **Criação de Entidades:** Tenta instanciar os objetos aplicando validações de domínio no construtor.
-3. **Tratamento de Falhas (Resiliência):** Captura exceções de validação de negócio sem interromper o fluxo total do lote, armazenando os erros separadamente.
-4. **Serialização JSON:** Converte apenas os objetos que passaram pelas regras de validação em uma string JSON formatada (`Indented`) e a salva em disco (`report.json`).
-5. **Desserialização e Leitura:** Lê o arquivo JSON gerado de volta para o sistema.
-6. **Relatório Analítico via LINQ:** Processa os dados recuperados extraindo estatísticas (totais, contadores condicionais, médias, ordenações e agrupamentos por categoria).
-
----
-
-## ʚɞ Tecnologias Utilizadas
-
-* **.NET (C#)**
-* **System.Text.Json** (Serialização e desserialização nativa)
-* **LINQ** (Consultas, agregações e manipulação de coleções)
+The application flow simulates a robust data processing pipeline:
+1. **Data Input:** Receives a list of raw objects (in this example, books).
+2. **Entity Creation:** Attempts to instantiate objects applying domain validations within the constructor.
+3. **Failure Handling (Resilience):** Catches business validation exceptions without interrupting the overall batch flow, storing errors separately.
+4. **JSON Serialization:** Converts only the objects that passed the validation rules into a formatted JSON string (`Indented`) and saves it to disk (`report.json`).
+5. **Deserialization & Reading:** Reads the generated JSON file back into the system.
+6. **LINQ Analytical Report:** Processes the retrieved data to extract statistics (totals, conditional counters, averages, sorting, and category groupings).
 
 ---
 
-## ʚɞ Estrutura de Pastas (Base)
+## ʚɞ Technologies Used
+
+- **.NET (C#)**
+- **System.Text.Json** (Native serialization and deserialization)
+- **LINQ** (Queries, aggregations, and collection manipulation)
+
+---
+
+## ʚɞ Folder Structure (Base)
 
 ```text
 json-report-generator/
 │
 ├── JsonReporter/
 │   ├── Domain/
-│   │   └── Entities/          # Entidades de Domínio e Regras de Negócio
-│   ├── Program.cs             # Fluxo principal, tratamento de erros e relatórios
-│   └── JsonReporter.csproj    # Arquivo de configuração do projeto C#
+│   │   └── Entities/          # Domain Entities and Business Rules
+│   ├── Program.cs             # Main flow, error handling, and reporting
+│   └── JsonReporter.csproj    # C# project configuration file
 │
-└── README.md                  # Documentação do projeto
-```
+└── README.md                  # Project documentation
 
----
+## ✦ How to Run the Project
 
-## ✦ Como Executar o Projeto
+Make sure you have the .NET SDK installed on your machine.
 
-Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/) instalado em sua máquina.
-
-1. Abra o terminal (PowerShell ou CMD) e navegue até o diretório do projeto:
+1. Open your terminal (PowerShell or CMD) and navigate to the project directory:
    ```bash
    cd JsonReporter
    ```
-2. Execute o comando de compilação e execução:
+2. Run the build and execution command:
    ```bash
    dotnet run
    ```
