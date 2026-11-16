@@ -2,8 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using JsonReporter.Domain.Entities;
+using System.Text.Json;
 
 namespace JsonReportGenerator{
+
+
+/*Fluxo:
+
+1. Receber dados
+2. Criar entidade
+3. Entidade valida regras de negócio
+4. Armazenar entidades válidas
+5. Registrar falhas
+6. Serializar apenas objetos válidos
+7. Exibir ou salvar JSON'''*/
 
 class Program
 {
@@ -55,6 +67,70 @@ class Program
                     Console.WriteLine(error);
                 }
             }
+
+            //serialização
+            string jsonString = JsonSerializer.Serialize(validBooks, new JsonSerializerOptions { WriteIndented = true });
+            System.IO.File.WriteAllText("report.json", jsonString);
+            JsonExporter.Export(validBooks, "report.json");
+            Console.WriteLine("JSON salvo com sucesso!");
+
+            //leitura
+            string jsonStringRead = System.IO.File.ReadAllText("report.json");
+            Console.WriteLine("\n=== JSON LIDO ===");
+            Console.WriteLine(jsonStringRead);
+
+            //desserealização
+            var booksRecuperados = JsonSerializer.Deserialize<List<Book>>(jsonStringRead);
+
+            Console.WriteLine("\n=== OBJETOS RECUPERADOS ===");
+
+            foreach (var book in booksRecuperados)
+                {
+                 Console.WriteLine( $"{book.Title} - {book.Author}");
+                }
+
+            //LINQ
+            int totalBooks = booksRecuperados.Count();
+            Console.WriteLine($"\nTotal de livros recuperados: {totalBooks}");
+
+            int livrosLidos = booksRecuperados.Count(b => b.IsRead);
+            Console.WriteLine($"Total de livros lidos: {livrosLidos}");
+
+            int naoLidos = booksRecuperados.Count(b => !b.IsRead);
+            Console.WriteLine($"Total de livros não lidos: {naoLidos}");
+
+            double mediaRating = booksRecuperados.Average(b => b.Rating);
+            Console.WriteLine($"Média de avaliação dos livros: {mediaRating:F2}");
+
+            var melhorLivro = booksRecuperados.OrderByDescending(b => b.Rating).FirstOrDefault();
+            if (melhorLivro != null)
+            {
+                Console.WriteLine($"Melhor livro: {melhorLivro.Title} - Nota: {melhorLivro.Rating}");
+            }
+            else
+            {
+                Console.WriteLine("Nenhum livro encontrado.");
+            }
+
+            var porGenero = booksRecuperados.GroupBy(b => b.Genre)
+                .Select(g => new { Genre = g.Key, Count = g.Count() });
+
+                foreach (var grupo in porGenero)
+                {
+                    Console.WriteLine($"Gênero: {grupo.Genre} | Total de livros: {grupo.Count}");
+                }
+                
+            int totalPaginas = booksRecuperados.Sum(b => b.PagesCount);
+            Console.WriteLine($"Total de páginas de todos os livros: {totalPaginas}");
+
+            Console.WriteLine("\n=== RELATÓRIO ANALÍTICO ===");
+            Console.WriteLine($"Total de livros: {totalBooks}");
+            Console.WriteLine($"Total de livros lidos: {livrosLidos}");
+            Console.WriteLine($"Total de livros não lidos: {naoLidos}");
+            Console.WriteLine($"Média de avaliação dos livros: {mediaRating:F2}");
+            Console.WriteLine($"Total de páginas de todos os livros: {totalPaginas}");
+
     }
 }
+
 }
