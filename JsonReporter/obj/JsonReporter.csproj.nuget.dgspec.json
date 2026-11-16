@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj": {}
+    "C:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj": {}
   },
   "projects": {
-    "c:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj": {
+    "C:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj",
+        "projectUniqueName": "C:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj",
         "projectName": "JsonReporter",
-        "projectPath": "c:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj",
+        "projectPath": "C:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj",
         "packagesPath": "C:\\Users\\André Felipe\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\obj\\",
+        "outputPath": "C:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\André Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config"

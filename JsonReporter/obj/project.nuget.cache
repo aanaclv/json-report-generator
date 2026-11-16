@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qdefGiHwFYo=",
+  "dgSpecHash": "yezZ61G2rF8=",
   "success": true,
-  "projectFilePath": "c:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj",
+  "projectFilePath": "C:\\Users\\André Felipe\\projetos-clara\\json-report-generator\\JsonReporter\\JsonReporter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\André Felipe\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.23\\microsoft.netcore.app.ref.9.0.23.nupkg.sha512",
     "C:\\Users\\André Felipe\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.23\\microsoft.windowsdesktop.app.ref.9.0.23.nupkg.sha512",

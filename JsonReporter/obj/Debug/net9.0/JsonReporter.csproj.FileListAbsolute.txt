@@ -1,0 +1,15 @@
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.AssemblyInfoInputs.cache
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.AssemblyInfo.cs
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.csproj.CoreCompileInputs.cache
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.sourcelink.json
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\bin\Debug\net9.0\JsonReporter.exe
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\bin\Debug\net9.0\JsonReporter.deps.json
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\bin\Debug\net9.0\JsonReporter.runtimeconfig.json
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\bin\Debug\net9.0\JsonReporter.dll
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\bin\Debug\net9.0\JsonReporter.pdb
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.dll
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\refint\JsonReporter.dll
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.pdb
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\JsonReporter.genruntimeconfig.cache
+C:\Users\André Felipe\projetos-clara\json-report-generator\JsonReporter\obj\Debug\net9.0\ref\JsonReporter.dll
